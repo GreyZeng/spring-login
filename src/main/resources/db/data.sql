@@ -1,0 +1,3 @@
+INSERT INTO `SYS_ROLE` (`ID`, `NAME`) VALUES (1, 'ADMIN'),(2, 'USER');
+INSERT INTO `SYS_USER` (`ID`, `NAME`, `PASSWORD`) VALUES (1, 'super', '888888'), (2, 'jack', '666666'), (3, 'lucy', '999999');
+INSERT INTO `SYS_USER_ROLE` (`USER_ID`, `ROLE_ID`) VALUES (1, 1),(2, 2),(3, 2);
