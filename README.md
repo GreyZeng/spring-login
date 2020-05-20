@@ -204,6 +204,29 @@ public class SysUserRole  {
 
 
 
+### 配置文件
+
+application.properties
+
+```properties
+spring.datasource.url=jdbc:h2:mem:userdb
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=123
+#设置SQL脚本的位置，resources/db目录下，如果不设置的话，默认就在resources目录下
+spring.datasource.schema=classpath:db/schema.sql
+spring.datasource.data=classpath:db/data.sql
+#H2控制台启用
+spring.h2.console.enabled=true
+#访问H2的URL
+spring.h2.console.path=/h2
+
+# 下划线转化为驼峰命名
+mybatis.configuration.map-underscore-to-camel-case=true
+```
+
+
+
 ### Mapper
 
 采用了Mybatis来操作数据库。
