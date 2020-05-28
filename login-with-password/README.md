@@ -1,10 +1,4 @@
-# Spring Security实现多种登录方式
-
-## 登录方式
-
-- 用户名密码登录
-- 短信验证码登录
-- 微信登录
+# Spring Security实现用户名密码登录
 
 ## 环境
 
@@ -527,21 +521,12 @@ public class LoginApplication {
 
 显示登录页面，输入用户名密码，点击登录，即可看到效果
 
-### 
-
-## 验证码登录
-
-TODO
-
-## 微信登录
-
-TODO
 
 ## 完整代码
 
-[Github](https://github.com/GreyZeng/spring-login)
+[Github](https://github.com/GreyZeng/spring-login/tree/master/login-with-password)
 
-[Gitee](https://gitee.com/greyzeng/spring-login)
+[Gitee](https://gitee.com/greyzeng/spring-login/tree/master/login-with-password)
 
 ## 参考文档&代码
 
