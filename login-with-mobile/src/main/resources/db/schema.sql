@@ -1,9 +1,3 @@
-# Spring Security实现短信验证码登录
-
-## 数据结构
-
-/resources/db/schema.sql
-```sql
 DROP TABLE IF EXISTS `sys_role`;
 DROP TABLE IF EXISTS `sys_permission`;
 DROP TABLE IF EXISTS `sys_user`;
@@ -41,40 +35,3 @@ CREATE TABLE `sys_user_role` (
 
 
 ) ;
-```
-
-/resources/db/data.sql
-```sql
-INSERT INTO `sys_role`
-VALUES (1, 'ROLE_ADMIN');
-INSERT INTO `sys_role`
-VALUES (2, 'ROLE_USER');
-
-INSERT INTO `sys_permission`
-VALUES (1, '/admin', 1, 'c,r,u,d');
-INSERT INTO `sys_permission`
-VALUES (2, '/admin', 2, 'r');
-
-
-INSERT INTO `sys_user`
-VALUES (1, 'admin', '110', '2020');
-INSERT INTO `sys_user`
-VALUES (2, 'user', '119', '2021');
-
-INSERT INTO `sys_user_role`
-VALUES (1, 1);
-INSERT INTO `sys_user_role`
-VALUES (2, 2);
-```
-
-## 配置文件
-```properties
-spring.datasource.url=jdbc:h2:mem:userdb
-spring.datasource.driverClassName=org.h2.Driver
-spring.datasource.username=sa
-spring.datasource.password=123
-spring.datasource.schema=classpath:db/schema.sql
-spring.datasource.data=classpath:db/data.sql
-spring.h2.console.enabled=true
-spring.h2.console.path=/h2
-```
