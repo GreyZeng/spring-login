@@ -525,3 +525,10 @@ spring.jpa.properties.hibernate.show_sql=true
 spring.jpa.properties.hibernate.format_sql=true
 ```
 
+## 参考文档
+
+[https://www.marcobehler.com/guides/spring-security](https://www.marcobehler.com/guides/spring-security)
+
+[https://www.jitwxs.cn/categories/%E5%AE%89%E5%85%A8%E6%A1%86%E6%9E%B6/Spring-Security/](https://www.jitwxs.cn/categories/%E5%AE%89%E5%85%A8%E6%A1%86%E6%9E%B6/Spring-Security/)
+
+[https://github.com/jitwxs/blog-sample/tree/master/SpringBoot/springboot_security](https://github.com/jitwxs/blog-sample/tree/master/SpringBoot/springboot_security)

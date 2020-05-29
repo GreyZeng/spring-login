@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+</head>
+<body>
+<form action="/authentication/mobile" method="post">
+    <table>
+        <tr>
+            <td>手机号:</td>
+            <td><input type="text" id="mobile" name="mobile" required></td>
+        </tr>
+        <tr>
+            <td>短信验证码:</td>
+            <td>
+                <input type="text" name="smsCode" required>
+                <a href="javascript:;" onclick="sendMsg()">发送验证码</a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="submit">登录</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<script>
+
+    function mouseover(obj) {
+        obj.style.cursor = "pointer";
+    }
+
+    function sendMsg() {
+        var mobile = $("#mobile").val();
+
+        $.ajax({
+            type: 'get',
+            async: true,
+            url: '/code/sms?mobile=' + mobile,
+            dataType: 'text',
+            data: null,
+            success: function (data) {
+                alert("发送成功");
+            },
+            error: function (error) {
+                console.log("内部错误");
+            }
+        });
+    }
+</script>
+</body>
+</html>
